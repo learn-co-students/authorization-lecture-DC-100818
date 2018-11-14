@@ -1,0 +1,2 @@
+module VisitorOdditiesHelper
+end

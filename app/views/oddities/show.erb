@@ -1,0 +1,11 @@
+<h1><%= @oddity.name %></h1>
+<h4><%= @oddity.description %></h4>
+
+<h3>Museum:</h3>
+<%= link_to @oddity.museum.name, @oddity.museum %></li>
+
+<br><br>
+<%= link_to "Delete Oddity", @oddity, method: :delete, data: { confirm: "You sure, brah?" } %>
+
+<br><br>
+<%= link_to "Back to all Oddities", oddities_path %>

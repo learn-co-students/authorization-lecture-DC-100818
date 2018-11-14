@@ -1,0 +1,21 @@
+<h1>Register</h1>
+
+
+<%= form_for @user do |f| %>
+  <%= f.label :username, "Username: " %>
+  <%= f.text_field :username %><br><br>
+
+  <%= f.label :password, "Password: " %>
+  <%= f.text_field :password %><br><br>
+
+  <%= f.label :name, "Name: " %>
+  <%= f.text_field :name %><br><br>
+
+  <%= f.label :hometown, "Hometown: " %>
+  <%= f.text_field :hometown %><br><br>
+
+  <%= f.label :favorite_cryptid, "Favorite Cryptid: " %>
+  <%= f.text_field :favorite_cryptid %><br><br><br>
+
+  <%= f.submit "Sign up" %>
+<% end %>

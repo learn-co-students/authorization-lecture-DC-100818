@@ -1,0 +1,7 @@
+<h1>Mystery Museums</h1>
+
+<ul>
+  <% @museums.each do |m| %>
+    <li><%= link_to "#{m.name} || #{m.location}", m %></li>
+  <% end %>
+</ul>

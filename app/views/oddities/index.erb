@@ -1,0 +1,10 @@
+<h1>Oddities:</h1>
+
+<ul>
+  <% @oddities.each do |o| %>
+    <li><%= link_to o.name, o %></li>
+  <% end %>
+</ul>
+
+<br>
+<%= link_to "New Oddity", new_oddity_path %>

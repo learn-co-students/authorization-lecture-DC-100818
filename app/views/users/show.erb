@@ -1,0 +1,21 @@
+<h1><%= @user.name %></h1>
+<h4>Hometown: </h4>
+  <p><%= @user.hometown %></p>
+<h4>Favorite Cryptid: </h4>
+  <p><%= @user.favorite_cryptid %></p>
+
+<h3>Visited Oddities:</h3>
+<% if @user.oddities.length > 0 %>
+  <% @user.oddities.each do |o| %>
+    <li><%= link_to o.name, o %></li>
+  <% end%>
+<% else %>
+  <%= @user.name + " hasn't visited any oddities yet!" %>
+<% end %>
+
+<% if current_user == @user %>
+  <br><%= link_to "Edit Profile", edit_user_path(@user) %>
+<% end %>
+
+<br><br>
+<%= link_to "Back to all Users", users_path %>

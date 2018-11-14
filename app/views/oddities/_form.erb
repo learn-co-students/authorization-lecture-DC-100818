@@ -1,0 +1,15 @@
+<%= form_for @oddity do |f| %>
+  <%= f.label :name, "Name:" %><br>
+  <%= f.text_field :name %><br><br>
+
+  <%= f.label :description, "Description:" %><br>
+  <%= f.text_area :description %><br><br>
+
+  <%= f.label :actual_description, "But what is it really? We have to know for legal reasons." %><br>
+  <%= f.text_area :actual_description %><br><br>
+
+  <%= f.label :museum_id, "Museum:" %><br>
+  <%= f.collection_select :museum_id, Museum.all, :id, :name %><br><br><br>
+
+  <%= f.submit submit_text %>
+<% end %>

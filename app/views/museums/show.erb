@@ -1,0 +1,13 @@
+<h2><%= @museum.name %></h2>
+<h4><%= @museum.location %></h4>
+
+<h3>Featured Oddities:</h3>
+<ul>
+  <% @museum.oddities.each do |o| %>
+    <li><%= link_to o.name, o %></li>
+    <p><%= o.description %></p>
+  <% end %>
+</ul>
+
+<br>
+<%= link_to "Back to all Museums", museums_path %>
