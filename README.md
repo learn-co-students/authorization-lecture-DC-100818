@@ -1,4 +1,5 @@
-# Authentication:
+# Authorization:
+
 ## Conditional Rendering:
 How can I show special things to a logged in user?
 ```ruby
